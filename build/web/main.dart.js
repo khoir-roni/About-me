@@ -28083,7 +28083,7 @@ A.Fx.prototype={
 $0(){B.a2.NR(window,this.a.c,"_blank")},
 $S:0}
 A.w9.prototype={
-U(a,b){return new A.ot(new A.vn(null),"Flutter Demo",A.a0n(null,B.e8),null)}}
+U(a,b){return new A.ot(new A.vn(null),"About me",A.a0n(null,B.e8),null)}}
 A.ut.prototype={}
 A.vR.prototype={
 MK(a,b){var s,r,q
