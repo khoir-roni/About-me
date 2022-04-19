@@ -1,7 +1,7 @@
 # about me
 
 untuk meilhat hasil kakulator versi buka disini 
-[Open](https://khoir-roni.github.io/About_me/build/web/#/)
+[Open](https://khoir-roni.github.io/About-me/build/web/index.html)
 
 A new Flutter project.
 
