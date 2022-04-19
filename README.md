@@ -1,4 +1,4 @@
-# simple_calculator
+# about me
 
 untuk meilhat hasil kakulator versi buka disini 
 [Open](https://khoir-roni.github.io/About_me/build/web/#/)
