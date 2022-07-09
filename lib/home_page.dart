@@ -1,6 +1,5 @@
-
-
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'dart:html' as html;
 
 import 'package:google_fonts/google_fonts.dart';
@@ -10,73 +9,81 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     var sizeHeight = MediaQuery.of(context).size.height;
     return Material(
-      child: Container(
-        width: double.infinity,
-        height: sizeHeight,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('assets/images/background.jpg'),
-              fit: BoxFit.cover),
-        ),
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 20.0,
-            ),
-            const CircleAvatar(
-              radius: 92,
-              backgroundImage: AssetImage('assets/images/profile.png'),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Text(
-              '@khoir_roni',
-              style: GoogleFonts.poppins(
-                fontSize: 20,
-                color: Colors.white,
+      child: SingleChildScrollView(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            minHeight: sizeHeight,
+          ),
+          child: IntrinsicHeight(
+            child: Container(
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/images/background.jpg'),
+                    fit: BoxFit.cover),
               ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Column(
-              children: const [
-                BlockName(
-                  label: 'Instagram',
-                  url: 'https://www.instagram.com/khoir_roni/',
-                ),
-                BlockName(
-                  label: 'Youtube',
-                  url: 'https://youtu.be/ClyWEQobBco',
-                ),
-                BlockName(
-                  label: 'Linkedin',
-                  url: 'https://www.linkedin.com/in/muhammad-ali-khoironi/',
-                ),
-                BlockName(
-                  label: 'Github',
-                  url: 'https://github.com/khoir-roni/',
-                ),
-              ],
-            ),
-            const Spacer(),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 10),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
+              child: Column(
                 children: [
+                  const SizedBox(
+                    height: 20.0,
+                  ),
+                  const CircleAvatar(
+                    radius: 92,
+                    backgroundImage: AssetImage('assets/images/profile.png'),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
                   Text(
-                    'Dibuat Mengunakan',
-                    style: GoogleFonts.lobsterTwo(
-                      fontSize: 10,
+                    '@khoir_roni',
+                    style: GoogleFonts.poppins(
+                      fontSize: 20,
                       color: Colors.white,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Column(
+                    children: const [
+                      BlockName(
+                        label: 'Instagram',
+                        url: 'https://www.instagram.com/khoir_roni/',
+                      ),
+                      BlockName(
+                        label: 'Youtube',
+                        url: 'https://youtu.be/ClyWEQobBco',
+                      ),
+                      BlockName(
+                        label: 'Linkedin',
+                        url:
+                            'https://www.linkedin.com/in/muhammad-ali-khoironi/',
+                      ),
+                      BlockName(
+                        label: 'Github',
+                        url: 'https://github.com/khoir-roni/',
+                      ),
+                    ],
+                  ),
+                  const Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 10),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          'Dibuat Mengunakan',
+                          style: GoogleFonts.lobsterTwo(
+                            fontSize: 10,
+                            color: Colors.white,
+                          ),
+                        )
+                      ],
                     ),
                   )
                 ],
               ),
-            )
-          ],
+            ),
+          ),
         ),
       ),
     );
